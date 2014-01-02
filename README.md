@@ -1,47 +1,24 @@
 # About
 
-*EARLY BOOTSTRAP 3 SUPPORT ADDED*: Still a bit buggy. See warnings section for
-information on using Bootstrap 2.3.2.
+This is a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
+So big thanks to Ryan.
+
+In this template I attempt two things:
+ -  make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as "discussions". Simplyfying the layout further.
+ - Fully support Bootstrap 3, with http://bootswatch.com/yeti/ theme as default. 
+
 
 See template.info.txt for main info
 
 See COPYING for license info
 
-This "theme" is actually intended to be modified with a Twitter Bootstrap theme
-of your choice. Twitter Bootstrap is a framework to create websites that work
-and look great in a range of devices and browsers.  It's quite customizable and
-there's many themes available for free and/or pay. A basic theme would require
-only that you overwrite a few files included in this theme. More radical
-changes would require changing the actual template layout (mostly in main.php).
+# Goal
 
-Effort has been put into making the template's public facing content look okay.
-Some back end functionality (e.g., the admin interface) may look distorted, but
-should still be functional.
-
-# Why This Theme?
-
-The [official Bootstrap page](http://twitter.github.com/bootstrap/) has many
-reasons why you might want your site to be based on Bootstrap. Bootstrap
-contains many useful components for building websites, including a responsive
-grid layout and excellent plug-in support.
-
-[DokuWiki](https://www.dokuwiki.org/) is an excellent file-based, open-source
-wiki software. It lets you easily edit and organize pages without requiring a
-database server.
-
-Combining the above two (via this theme), we get an excellent content editor
-(DokuWiki) and an excellent system to control the layout and look of the
-content (Bootstrap).
+My goal is to build a templete in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add too.
 
 ## Screenshots
 
-Here's what the theme looks like by default. Multiple screenshots in different
-screen resolutions show how the site changes as the amount of screen real
-estate changes.
-
-1. [320x480](https://raw.github.com/ryanwmoore/dokutwitterbootstrap/master/screenshot_320x480.png)
-2. [768x1024](https://raw.github.com/ryanwmoore/dokutwitterbootstrap/master/screenshot_768x1024.png)
-3. [980x1280](https://raw.github.com/ryanwmoore/dokutwitterbootstrap/master/screenshot_980x1280.png)
+Perhaps later when i am more satified with my progress.
 
 # Installation from Github
 
@@ -50,12 +27,12 @@ Do something like the following:
 1. Install DokuWiki as you normally would. See
    [DokuWiki.org](https://www.dokuwiki.org).
 2. ```cd dokuwiki/lib/tpl```
-3. ```mkdir dokutwitterbootstrap```
-4. ```cd dokutwitterbootstrap```
+3. ```mkdir dokubootstrap-yeti```
+4. ```cd dokubootstrap-yeti```
 5. ```git init```
-6. ```git pull git://github.com/ryanwmoore/dokutwitterbootstrap.git```
+6. ```git pull git://github.com/badeendjuh/dokubootstrap-yeti.git```
 7. Using DokuWiki's admin interface, change the wiki's template to
-   dokutwitterbootstrap.
+   dokubootstrap-yeti.
 
 # Customization
 
@@ -64,7 +41,6 @@ theme. Then, replace the following files with your own Bootstrap files:
 
 * css/
     * bootstrap.min.css
-    * bootstrap-theme.min.css
     * modifications.css: place minor global modifications to the
       bootstrap theme here. See included modifications.css, which enables the
       use of the floating top navbar 
@@ -80,7 +56,7 @@ theme. Then, replace the following files with your own Bootstrap files:
 
 This theme is hard-coded to use minified Bootstrap CSS and Bootstrap javascript. 
 
-It automatically includes jQuery 1.9.1 via the Google CDN.
+Tested with Dokuwiki "Binky" only.
 
 This theme is intended primarily for small sites that are modified by one or so
 people. Effort has been made to make public facing things look nice, but
@@ -100,18 +76,6 @@ DokuWiki's source code just to get this theme to work.
 The only major ``bug'' that I am aware of is that, when attempting to upload a
 new file to the median manager, a file upload button might not appear.  Click on
 the words "select files..." and the file upload select box will appear.
-
-
-# Base Version
-
-This theme is based off of Twitter Bootstrap 3. This theme's migration to
-Bootstrap 3 is recent and, honestly, still a bit buggy. I felt it better to put
-it out on the Internet, mostly working, than to not have any Bootstrap 3 support
-at all.
-
-Older versions of this theme used Twitter Bootstrap 2.3.2. See [the last
-Bootstrap 2.3
-commit](https://github.com/ryanwmoore/dokutwitterbootstrap/commit/41397bf3351972cb917415827c6945536e1a77ca).
 
 # Theme Resources
 
