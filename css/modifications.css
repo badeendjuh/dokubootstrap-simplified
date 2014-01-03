@@ -4,13 +4,15 @@ body {
 }
 
 /* offset h1 targets with top navbar so that navigation anchor links line up */
-h1, h2, h3, h4, h5 {
+.page h1, .page h2, .page h3, .page h4, .page h5 {
 	padding-top: 52px;
 	margin-top: 52px;
+	color: #008cba;
 }
 
-.sidebar-nav {
-    padding: 9px 0;
+/* Give the side TOC some space between top bar */
+.sidebar, .page {
+    padding: 15px 0;
 }
 
 @media (max-width: 980px) {

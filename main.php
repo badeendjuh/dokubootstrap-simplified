@@ -47,9 +47,13 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 					<a class="navbar-brand" href="./"><?php echo $conf['title']; ?></a>
  				</div>
            		<div class="collapse navbar-collapse">
+           			<ul class="nav navbar-nav navbar-left">
+						<?php tpl_includeFile('nav.html');?>
+					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<?php _tpl_userinfo(); ?>
+						<?php _tpl_userinfo(); ?>
+						<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Page Options<b class="caret"></b></a>
+           					<?php _tpl_output_page_tools($showTools, 'li'); ?>
 						</li>
 						<li>
 							<div class="navbar-form form-group" role="Search">
@@ -59,21 +63,6 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 					</ul>
 				</div>
            	</div> <!-- container -->
-		</nav> <!-- navbar -->
-		<nav class="nav navbar navbar-default" id="second_top_nav">
-			<div class="container">
-           		<ul class="nav navbar-nav navbar-left">
-					<?php tpl_includeFile('nav.html');?>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Page Options<b class="caret"></b></a>
-           				<?php _tpl_output_page_tools($showTools, 'li'); ?>
-					</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
-	   					<?php _tpl_output_tools_twitter_bootstrap($conf['useacl'] && $showTools); ?>
-					</li>
-           		</ul>
-			</div> <!-- container -->
 		</nav> <!-- navbar -->
 
 	    <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
@@ -104,7 +93,7 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 			<div class="clearer"></div>
 			<div class="container"></div>
 				<div class="row">
-        			<div class="col-md-4 col-md-offset-6 text-muted">
+        			<div class="col-md-5 col-md-offset-5 text-muted">
             	  		<?php tpl_pageinfo() /* 'Last modified' etc */ ?>
               			<?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
 	     	       	  	<?php tpl_includeFile('footer.html') ?>
