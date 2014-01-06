@@ -7,10 +7,13 @@
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
  */
 
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE); ini_set('display_errors', '1');  // Switch on for error reporting
+
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 @require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
 
 $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER['REMOTE_USER'] );
+$showTOC = ($ACT == "show");
 
 ?><!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>">
@@ -29,7 +32,7 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 	
 </head>
 
-<body data-spy="scroll" data-target=".sidebar">
+<body>
     <?php /* with these Conditional Comments you can better address IE issues in CSS files,
              precede CSS rules by #IE6 for IE6, #IE7 for IE7 and #IE8 for IE8 (div closes at the bottom) */ ?>
     <!--[if IE 6 ]><div id="IE6"><![endif]--><!--[if IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
@@ -51,10 +54,10 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 						<?php tpl_includeFile('nav.html');?>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<?php _tpl_userinfo(); ?>
-						<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Page Options<b class="caret"></b></a>
+						<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<b class="caret"></b></a>
            					<?php _tpl_output_page_tools($showTools, 'li'); ?>
 						</li>
+						<?php _tpl_userinfo(); ?>
 						<li>
 							<div class="navbar-form form-group" role="Search">
 								<?php _tpl_output_search_bar(); ?>
@@ -71,11 +74,18 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
         <div class="container">
         <!-- ********** SIDE BAR for TOCIFY ********** -->
         	<div class="row">
-				<!-- Make side bar 3 "md's" wide -->
-            	<div class="col-md-3">
-             		<?php _tpl_toc_to_twitter_bootstrap(); ?> 
-            	</div>
-            	<div class="col-md-8" id="dokuwiki__content">
+				
+				
+				<?php /* when in Show Mode we render the TOC, if not, use full width for content */ 
+				if ($showTOC) { ?>
+					<!-- Make side bar 3 "md's" wide -->
+            		<div class="col-md-3">
+             			<?php _tpl_toc_to_twitter_bootstrap(); ?> 
+           			</div>
+           			<div class="col-md-8" id="dokuwiki__content">
+				<?php } else { ?>
+            		<div class="col-md-11" id="dokuwiki__content">
+				<?php } ?>
                 	<div class="page">
 						<?php tpl_flush(); ?>
 						<?php tpl_content(false); ?>
@@ -91,9 +101,10 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 		<!-- ********** FOOTER ********** -->
 		<footer>
 			<div class="clearer"></div>
-			<div class="container"></div>
+			<div class="container">
 				<div class="row">
-        			<div class="col-md-5 col-md-offset-5 text-muted">
+        			<div class="col-md-11 text-muted pull-right">
+						<?php tpl_flush(); ?>
             	  		<?php tpl_pageinfo() /* 'Last modified' etc */ ?>
               			<?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
 	     	       	  	<?php tpl_includeFile('footer.html') ?>
@@ -111,7 +122,7 @@ $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER
 	
     <!-- load any scripts that may require a newer jQuery library than DokuWiki provides. -->
     <script src="<?php echo tpl_getMediaFile(array("js/bootstrap.min.js")); ?>"></script>
-	<script src="<?php echo tpl_getMediaFile(array("js/change_dokuwiki_structure.js")); ?>"></script>
+	<script src="<?php echo tpl_getMediaFile(array("js/template.js")); ?>"></script>
     <!-- restore jQuery for DokuWiki -->
     <!-- <script src="<?php //echo tpl_getMediaFile(array("js/restore_dokuwikis_jquery.js")); ?>"></script> -->
 </body>

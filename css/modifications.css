@@ -5,9 +5,8 @@ body {
 
 /* offset h1 targets with top navbar so that navigation anchor links line up */
 .page h1, .page h2, .page h3, .page h4, .page h5 {
-	padding-top: 52px;
-	margin-top: 52px;
-	color: #008cba;
+	padding-top: 72px;
+	margin-top: -52px;
 }
 
 /* Give the side TOC some space between top bar */

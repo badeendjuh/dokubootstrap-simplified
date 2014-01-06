@@ -166,8 +166,6 @@ function _tpl_userinfo($element='li') {
 		echo '</ul>';
  		echo '</li>';
 	}else{
-		tpl_action('login', 1, $element);
-		echo '<p class="navbar-text">/</p>';
- 		tpl_action('register', 1, $element);
+		tpl_action('login', 1, $element, 0, '', '', 'Login / Register');
 	}
 }
