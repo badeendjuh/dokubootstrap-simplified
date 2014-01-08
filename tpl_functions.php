@@ -53,7 +53,6 @@ function _tpl_action($type, $link=0, $wrapper=0) {
 /* dokubootstrap-yeti related functions
 ********************************************************************/
 
-
 function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstlevel=false) {
 
 		
@@ -61,24 +60,60 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
         return '';
     }
 
-    $ret = '<div class="sidebar" role="navigation">';
-    $ret .= '<ul class="nav nav-pills nav-stacked">';
+	//dw($data);
+    $out = '<div class="sidebar bs-sidebar affix" role="navigation">';
+    //$out .= '<ul class="nav nav-pills nav-stacked affix">';
+    $out .= '<ul class="nav affix">';
 
-    $first = true;
-    $li_inner = ' class ="active"';
+    $li_open = false;
+	$level = $data[0]['level'];
 
     //Only supports top level links for now.
-    foreach($data as $heading)
-    {
-        $ret .= '<li' . $li_inner . '><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a></li>';
+    foreach($data as $heading) {
+		if ($heading['level'] == $level) {
 
-        $li_inner = '';
+			// Close previous open li.
+			if($li_open) {
+				 $out .= '</li>';
+				 $li_open = false;
+			}else{
+				 $out .= '';
+			}
+
+        	$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+        	$li_open = true;
+
+		}else if($heading['level'] > $level) {
+        	$out .= '<ul class="nav">';
+			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$li_open = true;
+		
+		}else if($$heading['level'] < $level) {
+			
+			// Close previous open li.
+			if($li_open) {
+				 $out .= '</li>';
+				 $li_open = false;
+			}else{
+				 $out .= '';
+			}
+	        	
+			$out .= '</ul>';
+			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+		}
+		
+		$level = $heading['level'];
+    }
+	
+	// Close previous open li.
+    if($li_open) {
+    	$out .= '</li>';
     }
 
-    $ret .= '</ul>';
-    $ret .= '</div>';
+    $out .= '</ul>';
+    $out .= '</div>';
 
-    return $ret;
+    return $out;
 }
 
 function _tpl_toc_to_twitter_bootstrap_event_hander(&$event, $param)
@@ -169,3 +204,17 @@ function _tpl_userinfo($element='li') {
 		tpl_action('login', 1, $element, 0, '', '', 'Login / Register');
 	}
 }
+
+// debug web
+function dw($message) {
+        print "<pre>";
+        if (is_array($message)) {
+                print_r($message);
+        }else{
+                print $message;
+        }
+        print "<pre>";
+}
+
+
+
