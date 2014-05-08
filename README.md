@@ -18,8 +18,8 @@ My goal is to build a templete in which I can easily publish my frequently used 
 
 # Screenshots
 
-1. [Big width](https://raw.github.com/badeendjuh/dokubootstrap-yeti/master/screenshot_big_width.png)
-2. [Medium width](https://raw.github.com/badeendjuh/dokubootstrap-yeti/master/screenshot_small_width.png)
+1. [Big width](https://raw.githubusercontent.com/badeendjuh/dokubootstrap-yeti/master/screenshot_big_width.png)
+2. [Medium width](https://raw.githubusercontent.com/badeendjuh/dokubootstrap-yeti/master/screenshot_small_width.png)
 
 # Installation from Github
 
