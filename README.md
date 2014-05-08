@@ -102,4 +102,3 @@ Software Foundation does not consider GPL2 to be compatible with Apache 2.0.
 
 I don't really know how much it matters to the average user. Consult a lawyer if you're worried about this potential incompatibility. 
 
-
