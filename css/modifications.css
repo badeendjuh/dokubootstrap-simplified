@@ -10,7 +10,7 @@ body {
 }
 
 /* Give the side TOC some space between top bar */
-.sidebar, .page {
+.page {
     padding: 15px 0;
 }
 
@@ -22,8 +22,9 @@ body {
  *      */
 
 /* By default it's not affixed in mobile views, so undo that */
-.bs-sidebar.affix {
-  position: static;
+.bs-sidebar {
+  padding-top: 15px;
+  position: fixed;
 }
 
 /* First level of nav */
@@ -39,9 +40,10 @@ body {
 
 /* All levels of nav */
 .bs-sidebar .nav > li > a {
-  display: block;
+  display: block; 
   padding: 5px 20px;
 }
+
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
   text-decoration: none;
@@ -72,4 +74,13 @@ body {
    display: block;
 }
 
+@media screen and (max-width: 993px) { /* height <= 500 px */
 
+	.bs-sidebar {
+		display: none;
+	}
+}
+
+.text-right {
+	text-align: right;
+}

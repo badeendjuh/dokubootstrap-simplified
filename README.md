@@ -1,20 +1,15 @@
 # About
 
-This is a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
-So big thanks to Ryan.
-
 In this template I attempt two things:
- -  make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as "discussions". Simplyfying the layout further.
+ - Make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as "discussions". Simplyfying the layout further.
  - Fully support Bootstrap 3, with http://bootswatch.com/yeti/ theme as default. 
 
-
-See template.info.txt for main info
 
 See COPYING for license info
 
 # Goal
 
-My goal is to build a templete in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add too.
+My goal is to build a templete in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add to.
 
 ## Screenshots
 
@@ -36,21 +31,20 @@ Do something like the following:
 
 # Customization
 
-This DokuWiki theme will get you started with a very basic Twitter Boostrap
-theme. Then, replace the following files with your own Bootstrap files:
+From the Configuration Manager screen you can change to any of the available boostrap themes on http://bootswatch.com/
+
+If however you want to substitute the library with your own bootsrap theme you need to be aware of the following files
 
 * css/
-    * bootstrap.min.css
+    * bootstrap-<theme>.min.css
     * modifications.css: place minor global modifications to the
-      bootstrap theme here. See included modifications.css, which enables the
-      use of the floating top navbar 
-* img/
-    * glyphicons-halflings.png
-    * glyphicons-halflings-white.png
+      bootstrap theme here. See included modifications.css, which enables the use of TOC sidebar. 
 * js/
     * bootstrap.min.js: compile all your desired plugins into a single
-      minimized javascript file. The included bootstrap.min.js includes all
-      plugins 
+      minimized javascript file. The included bootstrap.min.js is version 3.0.2 andincludes all
+      plugins.
+	* modifications.js: Contains all javascript additions, including some client-side fixing of markup, adding the scroll behavior to the TOC etc. 
+
 
 # Warning
 
@@ -58,18 +52,9 @@ This theme is hard-coded to use minified Bootstrap CSS and Bootstrap javascript.
 
 Tested with Dokuwiki "Binky" only.
 
-This theme is intended primarily for small sites that are modified by one or so
-people. Effort has been made to make public facing things look nice, but
-non-public interfaces (e.g., edit interfaces, admin, configuration settings)
-may not have been updated and may appear ugly. These should still be
-functional.
+This theme is intended primarily for small sites that are modified by only a handfull of people. Effort has been made to make public facing things look nice, but non-public interfaces (e.g., edit interfaces, admin, configuration settings) may not have been updated and may appear ugly. These should still be functional.
 
-DokuWiki's "Binky" release puts some links in <bdi> tags. This causes some links
-to look unstyled. This could be fixed by modifying how DokuWiki generates these
-links. Instead, the file js/change_dokuwiki_structure.js dynamically modifies
-the DOM structure to fix this by detaching and reattaching such links. Yes, that
-"solution" seems a bit hacky. But, I'd rather not require that people modify
-DokuWiki's source code just to get this theme to work.
+please have a carefull look at js/modifications.js; it contains some client side fixing of markup, which could be done in the Dokuwiki core code, but that's to deep a change to be included in this template. The comments in the .js file should provide suffiecient clarification on the purpose of each statement.
 
 ##  Bugs
 
@@ -77,10 +62,6 @@ The only major ``bug'' that I am aware of is that, when attempting to upload a
 new file to the median manager, a file upload button might not appear.  Click on
 the words "select files..." and the file upload select box will appear.
 
-# Theme Resources
-
-Here's some good free themes to start with: http://bootswatch.com/
-That site also has a swatch maker so you can make your own style.
 
 # DokuWiki Specifics
 
@@ -96,22 +77,23 @@ the page information and site license.
 This template does support a ```meta.html``` file, which will be output right
 before the head element is closed.
 
+# Acknowledgements
+
+This is a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
+So big thanks to Ryan.
+
+Also, this template would not exists without http://bootstrap.com
+
 # License
 
-This DokuWiki theme is based off of the [DokuWiki Starter
-template](https://github.com/selfthinker/dokuwiki_template_starter/), released
+This DokuWiki theme is based off of the [dokutwitterbootstrap Template](https://github.com/ryanwmoore/dokutwitterbootstrap), released
 under GPL v2.0. Therefore, this template is also released under that license.
-I've modified the starter template to make use of Twitter Bootstrap
+
+I've modified the template to make even more  use of Twitter Bootstrap
 code/functionality. Twitter Bootstrap is licensed under Apache License v2.0.
 According to http://www.apache.org/licenses/GPL-compatibility.html , the Free
-Software Foundation does not consider GPL2 to be compatible with Apache 2.0. I
-don't really know how much it matters to the average user. Consult a lawyer if
-you're worried about this potential incompatibility. 
+Software Foundation does not consider GPL2 to be compatible with Apache 2.0. 
 
+I don't really know how much it matters to the average user. Consult a lawyer if you're worried about this potential incompatibility. 
 
-# Disclaimer
-
-I'm not intimately familiar with either DokuWiki template coding or Bootstrap.
-I may have done stupid things. If so, please make appropriate changes and
-send a pull request.
 

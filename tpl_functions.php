@@ -61,9 +61,9 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
     }
 
 	//dw($data);
-    $out = '<div class="sidebar bs-sidebar affix" role="navigation">';
+    $out = '<div class="bs-sidebar" role="navigation">';
     //$out .= '<ul class="nav nav-pills nav-stacked affix">';
-    $out .= '<ul class="nav affix">';
+    $out .= '<ul class="nav">';
 
     $li_open = false;
 	$level = $data[0]['level'];

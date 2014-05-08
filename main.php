@@ -27,8 +27,9 @@ $showTOC = ($ACT == "show");
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
     <link href="<?php echo tpl_getMediaFile(array("css/modifications.css")); ?>" rel="stylesheet">
-	<link href="<?php echo tpl_getMediaFile(array("css/dokuwikicompatibility.css")); ?>" rel="stylesheet">
-	<link href="<?php echo tpl_getMediaFile(array("css/bootstrap-yeti.css")); ?>" rel="stylesheet">
+	<link href="<?php echo tpl_getMediaFile(array("css/bootstrap-".tpl_getConf('bootswatch').".min.css")); ?>" rel="stylesheet">
+    <script src="<?php echo tpl_getMediaFile(array("js/bootstrap.min.js")); ?>"></script>
+	<script src="<?php echo tpl_getMediaFile(array("js/modifications.js")); ?>"></script>
 	
 </head>
 
@@ -103,7 +104,7 @@ $showTOC = ($ACT == "show");
 			<div class="clearer"></div>
 			<div class="container">
 				<div class="row">
-        			<div class="col-md-11 text-muted pull-right">
+        			<div class="col-md-11 text-muted text-right">
 						<?php tpl_flush(); ?>
             	  		<?php tpl_pageinfo() /* 'Last modified' etc */ ?>
               			<?php tpl_license('button') /* content license, parameters: img=*badge|button|0, imgonly=*0|1, return=*0|1 */ ?>
@@ -115,15 +116,8 @@ $showTOC = ($ACT == "show");
 
     </div><!-- dokuwiki__site -->
 
-    <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
+    <div class="no"><?php //tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
     <!--[if ( IE 6 | IE 7 | IE 8 ) ]></div><![endif]-->
 
-   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-	
-    <!-- load any scripts that may require a newer jQuery library than DokuWiki provides. -->
-    <script src="<?php echo tpl_getMediaFile(array("js/bootstrap.min.js")); ?>"></script>
-	<script src="<?php echo tpl_getMediaFile(array("js/template.js")); ?>"></script>
-    <!-- restore jQuery for DokuWiki -->
-    <!-- <script src="<?php //echo tpl_getMediaFile(array("js/restore_dokuwikis_jquery.js")); ?>"></script> -->
 </body>
 </html>
