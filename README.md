@@ -4,16 +4,22 @@ In this template I attempt two things:
  - Make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as "discussions". Simplyfying the layout further.
  - Fully support Bootstrap 3, with http://bootswatch.com/yeti/ theme as default. 
 
-
-See COPYING for license info
-
 # Goal
 
 My goal is to build a templete in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add to.
 
-## Screenshots
+# Features
 
-Perhaps later when i am more satified with my progress.
+* Back to basics, sharing knowledge and information between peers without collatoral.
+* Easily switch template visuals using pre-populated styles from http://bootswatch.com
+* Bootstrap 3 ready.
+* Automatic sidebar that scrolls along with you, collapsing / opening the main header of where you are in the page
+* Dokuwiki Menu functions out of sight, but just 2 clicks away.
+
+# Screenshots
+
+1. [Big width](https://raw.github.com/badeendjuh/dokubootstrap-yeti/master/screenshot_big_width.png)
+2. [Medium width](https://raw.github.com/badeendjuh/dokubootstrap-yeti/master/screenshot_small_width.png)
 
 # Installation from Github
 
