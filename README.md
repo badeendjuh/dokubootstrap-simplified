@@ -31,9 +31,9 @@ Do something like the following:
 3. ```mkdir dokubootstrap-simplified```
 4. ```cd dokubootstrap-simplified```
 5. ```git init```
-6. ```git pull git://github.com/badeendjuh/dokubootstrap-simplified.git```
+6. ```git pull https://github.com/badeendjuh/dokubootstrap-simplified.git```
 7. Using DokuWiki's admin interface, change the wiki's template to
-   dokubootstrap-yeti.
+   dokubootstrap-simplified.
 
 # Customization
 
@@ -85,10 +85,10 @@ before the head element is closed.
 
 # Acknowledgements
 
-This is a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
+This theme started as a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
 So big thanks to Ryan.
 
-Also, this template would not exists without http://bootstrap.com
+Also, this template would not exists without http://getbootstrap.com and http://bootswatch.com
 
 # License
 
