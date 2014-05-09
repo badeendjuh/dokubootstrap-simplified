@@ -28,10 +28,10 @@ Do something like the following:
 1. Install DokuWiki as you normally would. See
    [DokuWiki.org](https://www.dokuwiki.org).
 2. ```cd dokuwiki/lib/tpl```
-3. ```mkdir dokubootstrap-yeti```
-4. ```cd dokubootstrap-yeti```
+3. ```mkdir dokubootstrap-simplified```
+4. ```cd dokubootstrap-simplified```
 5. ```git init```
-6. ```git pull git://github.com/badeendjuh/dokubootstrap-yeti.git```
+6. ```git pull git://github.com/badeendjuh/dokubootstrap-simplified.git```
 7. Using DokuWiki's admin interface, change the wiki's template to
    dokubootstrap-yeti.
 
