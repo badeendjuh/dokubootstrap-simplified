@@ -56,15 +56,15 @@ If however you want to substitute the library with your own bootsrap theme you n
 
 This theme is hard-coded to use minified Bootstrap CSS and Bootstrap javascript. 
 
-Tested with Dokuwiki "Binky" only.
+Tested with Dokuwiki "Binky" and "Ponder Stibbon".
 
 This theme is intended primarily for small sites that are modified by only a handfull of people. Effort has been made to make public facing things look nice, but non-public interfaces (e.g., edit interfaces, admin, configuration settings) may not have been updated and may appear ugly. These should still be functional.
 
-please have a carefull look at js/modifications.js; it contains some client side fixing of markup, which could be done in the Dokuwiki core code, but that's to deep a change to be included in this template. The comments in the .js file should provide suffiecient clarification on the purpose of each statement.
+When making changes, please have a carefull look at js/modifications.js; it contains some client side fixing of markup, which could be done in the Dokuwiki core code, but that's to deep a change to be included in this template. The comments in the .js file should provide suffiecient clarification on the purpose of each statement.
 
 ##  Bugs
 
-The only major ``bug'' that I am aware of is that, when attempting to upload a
+The only major ``bug`` that I am aware of is that, when attempting to upload a
 new file to the median manager, a file upload button might not appear.  Click on
 the words "select files..." and the file upload select box will appear.
 
