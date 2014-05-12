@@ -1,12 +1,10 @@
 # About
 
-In this template I attempt two things:
- - Make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as "discussions". Simplyfying the layout further.
- - Fully support Bootstrap 3, with http://bootswatch.com/yeti/ theme as default. 
+In this template I attempt a number of things:
 
-# Goal
-
-My goal is to build a templete in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add to.
+ * Make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as .discussions.. Simplyfying the layout further.
+ * Fully support Bootstrap 3, with http://bootswatch.com/default/ theme as default, though I prefer ``yeti`` better.
+ * My goal is to build a template in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add to.
 
 # Features
 
