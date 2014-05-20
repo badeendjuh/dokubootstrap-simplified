@@ -1,4 +1,4 @@
-base     dokubootstrap-simplified
+base     dokubootstrapsimplified
 author   Paul in 't Hout
 email    badeendjuh@email.com
 date     2014-05-14
