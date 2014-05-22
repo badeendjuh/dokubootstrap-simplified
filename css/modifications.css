@@ -84,11 +84,3 @@ body {
 .text-right {
 	text-align: right;
 }
-
-/* Make links to non-existend wiki pages obvious */
-
-a[rel='nofollow'] {
-	font-style: italic;
-	font-size: 90%;
-	font-weight: lighter;
-}
