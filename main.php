@@ -60,7 +60,7 @@ $showTOC = ($ACT == "show");
 						</li>
 						<?php _tpl_userinfo(); ?>
 						<li>
-							<div class="navbar-form form-group" role="Search">
+							<div class="navbar-form form-group" role="search">
 								<?php _tpl_output_search_bar(); ?>
 							</div>
 						</li>
