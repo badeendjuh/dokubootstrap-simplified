@@ -193,7 +193,7 @@ function _tpl_userinfo($element='li') {
 	global $INFO;
 
  	if(isset($_SERVER['REMOTE_USER'])) {
-      	echo '<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'.hsc($INFO['userinfo']['name']).'<b class="caret"></b></a>';
+      	echo '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">'.hsc($INFO['userinfo']['name']).'<b class="caret"></b></a>';
  		echo '<ul class="dropdown-menu">';
 		tpl_action('admin', 1, $element);
  		tpl_action('profile', 1, $element);
