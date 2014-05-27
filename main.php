@@ -55,12 +55,12 @@ $showTOC = ($ACT == "show");
 						<?php tpl_includeFile('nav.html');?>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li class"dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<b class="caret"></b></a>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Options<b class="caret"></b></a>
            					<?php _tpl_output_page_tools($showTools, 'li'); ?>
 						</li>
 						<?php _tpl_userinfo(); ?>
 						<li>
-							<div class="navbar-form form-group" role="Search">
+							<div class="navbar-form form-group" role="search">
 								<?php _tpl_output_search_bar(); ?>
 							</div>
 						</li>
