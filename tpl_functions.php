@@ -80,15 +80,15 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 				 $out .= '';
 			}
 
-        	$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$out .= '<li>' . html_list_toc($heading);
         	$li_open = true;
 
 		}else if($heading['level'] > $level) {
         	$out .= '<ul class="nav">';
-			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$out .= '<li>' . html_list_toc($heading);
 			$li_open = true;
 		
-		}else if($$heading['level'] < $level) {
+		}else if($heading['level'] < $level) {
 			
 			// Close previous open li.
 			if($li_open) {
@@ -99,7 +99,7 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 			}
 	        	
 			$out .= '</ul>';
-			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$out .= '<li>' . html_list_toc($heading);
 		}
 		
 		$level = $heading['level'];
