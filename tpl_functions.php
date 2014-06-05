@@ -88,7 +88,7 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 			$out .= '<li>' . html_list_toc($heading);
 			$li_open = true;
 		
-		}else if($$heading['level'] < $level) {
+		}else if($heading['level'] < $level) {
 			
 			// Close previous open li.
 			if($li_open) {
