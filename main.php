@@ -13,7 +13,10 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 @require_once(dirname(__FILE__).'/tpl_functions.php'); /* include hook for template functions */
 
 $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER['REMOTE_USER'] );
-$showTOC = ($ACT == "show");
+# calling tpl_toc() here returns null if the toc wouldn't normally be rendered
+# so $showTOC will be true if TOC would be rendered, false if not
+# this affects our grid layout later ( see 'if ($showTOC)' )
+$showTOC = ($ACT == "show") && tpl_toc(true);
 
 ?><!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>">
