@@ -26,8 +26,8 @@ $showTOC = ($ACT == "show");
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
     <?php tpl_includeFile('meta.html') ?>
+    <link href="<?php echo tpl_getMediaFile(array("css/bootstrap-".tpl_getConf('bootswatch').".min.css")); ?>" rel="stylesheet">
     <link href="<?php echo tpl_getMediaFile(array("css/modifications.css")); ?>" rel="stylesheet">
-	<link href="<?php echo tpl_getMediaFile(array("css/bootstrap-".tpl_getConf('bootswatch').".min.css")); ?>" rel="stylesheet">
     <script src="<?php echo tpl_getMediaFile(array("js/bootstrap.min.js")); ?>"></script>
 	<script src="<?php echo tpl_getMediaFile(array("js/modifications.js")); ?>"></script>
 	
