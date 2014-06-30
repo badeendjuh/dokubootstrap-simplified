@@ -48,6 +48,11 @@ $showTOC = ($ACT == "show");
     	<nav class="navbar navbar-inverse navbar-fixed-top">
     		<div class="container">
 				<div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 					<a class="navbar-brand" href="./"><?php echo $conf['title']; ?></a>
  				</div>
            		<div class="collapse navbar-collapse">
