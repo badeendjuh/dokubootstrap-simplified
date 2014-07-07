@@ -72,7 +72,7 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
     foreach($data as $heading) {
 
 		// link or reference?
-		isset($heading['hid']) ? $href = '#'.$heading['hid']) : $href = $heading['link'];
+		isset($heading['hid']) ? $href = '#'.$heading['hid'] : $href = $heading['link'];
 		
 		if ($heading['level'] == $level) {
 
