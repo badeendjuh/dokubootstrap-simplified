@@ -70,6 +70,10 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 
     //Only supports top level links for now.
     foreach($data as $heading) {
+
+		// link or reference?
+		isset($heading['hid']) ? $href = '#'.$heading['hid']) : $href = $heading['link'];
+		
 		if ($heading['level'] == $level) {
 
 			// Close previous open li.
@@ -79,16 +83,16 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 			}else{
 				 $out .= '';
 			}
-
-        	$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			
+        	$out .= '<li><a href="' . $href . '">'. $heading['title'] . '</a>';
         	$li_open = true;
 
 		}else if($heading['level'] > $level) {
         	$out .= '<ul class="nav">';
-			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$out .= '<li><a href="' . $href . '">'. $heading['title'] . '</a>';
 			$li_open = true;
 		
-		}else if($$heading['level'] < $level) {
+		}else if($heading['level'] < $level) {
 			
 			// Close previous open li.
 			if($li_open) {
@@ -99,7 +103,7 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 			}
 	        	
 			$out .= '</ul>';
-			$out .= '<li><a href="#' . $heading['hid'] . '">'. $heading['title'] . '</a>';
+			$out .= '<li><a href="' . $href . '">'. $heading['title'] . '</a>';
 		}
 		
 		$level = $heading['level'];
