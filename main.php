@@ -1,6 +1,6 @@
 <?php
 /**
- * DokuWiki Twitter Boostrap Template
+ * DokuWiki Twitter Bootstrap Template
  *
  * @link     https://github.com/ryanwmoore/dokutwitterbootstrap
  * @author   Ryan Moore <rwmoore07@gmail.com>

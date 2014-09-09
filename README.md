@@ -35,7 +35,7 @@ Do something like the following:
 
 # Customization
 
-From the Configuration Manager screen you can change to any of the available boostrap themes on http://bootswatch.com/
+From the Configuration Manager screen you can change to any of the available bootstrap themes on http://bootswatch.com/
 
 If however you want to substitute the library with your own bootsrap theme you need to be aware of the following files
 
