@@ -124,7 +124,7 @@ $showTOC = ($ACT == "show") && tpl_toc(true);
 
     </div><!-- dokuwiki__site -->
 
-    <div class="no"><?php //tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
+    <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
     <!--[if ( IE 6 | IE 7 | IE 8 ) ]></div><![endif]-->
 
 </body>

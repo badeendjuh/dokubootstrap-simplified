@@ -1,7 +1,7 @@
 base     dokubootstrapsimplified
 author   Paul in 't Hout
 email    badeendjuh@email.com
-date     2014-07-07
+date     2014-09-17
 name     Bootstrap Simplified Template
 desc     DokuWiki template for Simplified content sharing.
 url      https://github.com/badeendjuh/dokubootstrap-simplified

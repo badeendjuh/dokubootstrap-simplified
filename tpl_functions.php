@@ -171,7 +171,7 @@ function _tpl_output_search_bar()
 
     print '<form action="'.wl().'" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no">';
     print '<input type="hidden" name="do" value="search" />';
-    print '<input type="text" placeholder="'.$lang['btn_search'].'" ';
+    print '<input class="" type="text" placeholder="'.$lang['btn_search'].'" ';
     if($ACT == 'search') print 'value="'.htmlspecialchars($QUERY).'" ';
     if(!$autocomplete) print 'autocomplete="off" ';
     print 'id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" />';
