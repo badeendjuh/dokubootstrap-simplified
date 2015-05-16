@@ -96,8 +96,13 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 			
 			// Close previous open li.
 			if($li_open) {
-				 $out .= '</li>';
-				 $li_open = false;
+				for ($i=0; $i < $level - $heading['level'] - 1; ++$i) {
+					$out .= '</li>';
+					$out .= '</ul>';
+				}
+				$out .= '</li>';
+				$li_open = false;
+				
 			}else{
 				 $out .= '';
 			}
@@ -108,7 +113,7 @@ function _tpl_toc_to_twitter_bootstrap_event_hander_dump_level($data, $firstleve
 		
 		$level = $heading['level'];
     }
-	
+
 	// Close previous open li.
     if($li_open) {
     	$out .= '</li>';
