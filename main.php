@@ -80,6 +80,25 @@ $showTOC = ($ACT == "show") && tpl_toc(true);
 	    <?php html_msgarea() /* occasional error and info messages on top of the page */ ?>
     	<?php tpl_includeFile('header.html') ?>
 
+	<!-- Breadcrumbs -->
+        <?php if( ($conf['breadcrumbs']) || ($conf['youarehere']) ) {?>
+        	<div class="container">
+        		<?php 
+	       			if($conf['breadcrumbs']){
+	       				?><div class="breadcrumbs"><?php
+        				tpl_breadcrumbs();
+        				?></div><?php
+        			}
+        			if($conf['youarehere']){
+        				?><div class="breadcrumbs"><?php
+        				tpl_youarehere();
+        				?></div><?php
+        			}
+        		?>
+        	</div>
+        <?php }?>
+        <!-- End Breadcrumbs -->
+
         <div class="container">
         <!-- ********** SIDE BAR for TOCIFY ********** -->
         	<div class="row">
