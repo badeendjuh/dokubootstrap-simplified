@@ -2,13 +2,13 @@
 
 In this template I attempt a number of things:
 
- * Make the layout of dokuwiki as simple as possible, striping it from any excess features I do not need, such as .discussions.. Simplyfying the layout further.
+ * Make the layout of dokuwiki as simple as possible, stripping it from any excess features I do not need, such as .discussions.. Simplyfying the layout further.
  * Fully support Bootstrap 3, with http://bootswatch.com/default/ theme as default, though I prefer ``yeti`` better.
  * My goal is to build a template in which I can easily publish my frequently used text's, commands, action plans etc for my friends a colleagues to use and add to.
 
 # Features
 
-* Back to basics, sharing knowledge and information between peers without collatoral.
+* Back to basics, sharing knowledge and information between peers without collateral.
 * Easily switch template visuals using pre-populated styles from http://bootswatch.com
 * Bootstrap 3 ready.
 * Automatic sidebar that scrolls along with you, collapsing / opening the main header of where you are in the page
@@ -58,7 +58,7 @@ Tested with Dokuwiki "Binky" and "Ponder Stibbon".
 
 This theme is intended primarily for small sites that are modified by only a handfull of people. Effort has been made to make public facing things look nice, but non-public interfaces (e.g., edit interfaces, admin, configuration settings) may not have been updated and may appear ugly. These should still be functional.
 
-When making changes, please have a carefull look at js/modifications.js; it contains some client side fixing of markup, which could be done in the Dokuwiki core code, but that's to deep a change to be included in this template. The comments in the .js file should provide suffiecient clarification on the purpose of each statement.
+When making changes, please have a careful look at js/modifications.js: it contains some client side fixing of markup, which could be done in the Dokuwiki core code, but that's too deep a change to be included in this template. The comments in the .js file should provide sufficient clarification on the purpose of each statement.
 
 ##  Bugs
 
@@ -86,14 +86,14 @@ before the head element is closed.
 This theme started as a fork from https://github.com/ryanwmoore/dokutwitterbootstrap
 So big thanks to Ryan.
 
-Also, this template would not exists without http://getbootstrap.com and http://bootswatch.com
+Also, this template would not exist without http://getbootstrap.com and http://bootswatch.com
 
 # License
 
 This DokuWiki theme is based off of the [dokutwitterbootstrap Template](https://github.com/ryanwmoore/dokutwitterbootstrap), released
 under GPL v2.0. Therefore, this template is also released under that license.
 
-I've modified the template to make even more  use of Twitter Bootstrap
+I've modified the template to make even more use of Twitter Bootstrap
 code/functionality. Twitter Bootstrap is licensed under Apache License v2.0.
 According to http://www.apache.org/licenses/GPL-compatibility.html , the Free
 Software Foundation does not consider GPL2 to be compatible with Apache 2.0. 
